@@ -1,9 +1,9 @@
 <h1>Your Text Analysis</h1>
 
-<h2>Number of Words: </h2>
+<h2>Number of Words: <%= @analyzed_text.split(" ").length %></h2>
 
-<h2>Vowels: </h2>
+<h2>Vowels: <%= @analyzed_text.scan(/[aeiou]/).count %></h2>
 
-<h2>Consonants: </h2>
+<h2>Consonants: <%= @analyzed_text.scan(/[bcdfghjklmnpqrstvxyz]/).count %></h2>
 
-<h2>Most Common Letter: _____ used _____ times</h2>
+<h2>Most Common Letter: <%= @letter.upcase %>, used <%= @freq %> times</h2>
